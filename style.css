@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.cal{
+    width: 350px;
+    height: 450px;
+    border-radius: 8px;
+    background-color: black;
+
+
+}
+.cal .centre .ecran{
+    width: 270px;
+    height: 50px;
+    border: 1px solid black;
+     /* margin: 10px;  */
+    display: flex;
+    justify-content: center;
+   
+    /* margin-top: 20px; */
+    margin:20px 45px ;
+    background-color: gray;
+}
+.cal .touch{
+    display: grid;
+    justify-content: center;
+    gap: 10 px;
+}
+.cal .touch .prim, .cal .touch .op_prim{
+    margin:  10px;
+    padding: 16px;
+}
+.cal .touch .last{
+    margin:  5px;
+    padding:  10px 128px;
+    background-color: rgb(255, 128, 0);
+
+}
+.cal .touch .primred{
+    margin:  20px;
+    padding: 16px;
+    background-color: red;
+}
+.cal .touch .bloclast{
+    display: flex;
+    justify-content: center;
+
+}
+/* .cal .centre{
+    display: flex;
+    align-items: center;
+} */
