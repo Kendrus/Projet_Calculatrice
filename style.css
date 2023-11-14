@@ -1,57 +1,84 @@
-body{
+:root {
+    --primary: #d7e0e5;
+    --body-bg: #61e0fa;
+    --btn-bg: #d3d3d3;
+    --clear-btn-bg: #ff1918;
+    --calculate-btn-bg:#fc3f00;
+}
+
+body {
     display: flex;
     justify-content: center;
     padding-top: 40px;
     height: 100vh;
-    background-color: aqua;
+    background-color: var(--body-bg);
 }
 
-.cal{
+.cal {
     width: 350px;
     height: 450px;
-    border-radius: 8px;
+    border-radius: 20px;
     background-color: black;
-
-
 }
-.cal .centre .ecran{
-    width: 270px;
+
+.cal .centre .ecran {
+    width: 300px;
+    margin: 20px auto;
+    margin-top: 35px;
     height: 50px;
     border: 1px solid black;
-     /* margin: 10px;  */
+    background-color: var(--primary);
     display: flex;
-    justify-content: center;
-   
-    /* margin-top: 20px; */
-    margin:20px 45px ;
-    background-color: gray;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 3px;
 }
-.cal .touch{
+
+.cal .centre .touch {
     display: grid;
+    grid-template-columns: repeat(4, 75px);
+    /* column-gap: 5px; */
+    row-gap: 10px;
     justify-content: center;
-    gap: 10 px;
+    place-items: center;
 }
-.cal .touch .prim, .cal .touch .op_prim{
-    margin:  10px;
-    padding: 16px;
-}
-.cal .touch .last{
-    margin:  5px;
-    padding:  10px 128px;
-    background-color: rgb(255, 128, 0);
 
+.cal .centre .touch div {
+    height: 55px;
+    width: 55px;
 }
-.cal .touch .primred{
-    margin:  20px;
-    padding: 16px;
-    background-color: red;
-}
-.cal .touch .bloclast{
-    display: flex;
-    justify-content: center;
 
+.cal .centre .touch div .prim,
+.cal .centre .touch div .op_prim,
+.cal .centre .touch div .primred {
+    border-radius: 4px;
+    border: none;
+    background: var(--btn-bg);
+    font-weight: 600;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
 }
-/* .cal .centre{
-    display: flex;
-    align-items: center;
-} */
+
+.cal .centre .touch div .primred {
+    background: var(--clear-btn-bg);
+    color: white;
+    width: 100%;
+}
+
+.cal .centre .bloclast {
+    text-align: center;
+    margin-top: 15px;
+    margin: 15px 35px 0;
+}
+
+.cal .centre .bloclast .last {
+    border:none;
+    padding: 12px 0px;
+    width: 100%;
+    background-color: var(--calculate-btn-bg);
+    color: white;
+    font-size: 20px;
+}
